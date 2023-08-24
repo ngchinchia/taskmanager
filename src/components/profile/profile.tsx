@@ -25,7 +25,7 @@ export const Profile: FC<IProfile> = (props): ReactElement => {
         }}
       >
         <Typography variant="h4" color="text.primary">
-          J
+          N
         </Typography>
       </Avatar>
 
