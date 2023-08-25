@@ -45,7 +45,7 @@ export const CreateTaskForm: FC = (): ReactElement => {
 
   // Create task mutation
   const createTaskMutation = useMutation((data: ICreateTask) =>
-    sendApiRequest("http://localhost:3200/tasks", "POST", data)
+    sendApiRequest("https://task-management-backend-zsa6.onrender.com/tasks", "POST", data)
   );
 
   function createTaskHandler() {

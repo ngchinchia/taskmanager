@@ -17,14 +17,14 @@ export const TaskArea: FC = (): ReactElement => {
 
   const { error, isLoading, data, refetch } = useQuery(["tasks"], async () => {
     return await sendApiRequest<ITaskApi[]>(
-      "http://localhost:3200/tasks",
+      "https://task-management-backend-zsa6.onrender.com/tasks",
       "GET"
     );
   });
 
   // Update task mutation
   const updateTaskMutation = useMutation((data: IUpdateTask) =>
-    sendApiRequest("http://localhost:3200/tasks", "PUT", data)
+    sendApiRequest("https://task-management-backend-zsa6.onrender.com/tasks", "PUT", data)
   );
 
   useEffect(() => {
