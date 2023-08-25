@@ -78,7 +78,7 @@ export const CreateTaskForm: FC = (): ReactElement => {
     return () => {
       clearTimeout(successTimeout);
     };
-  }, [createTaskMutation.isSuccess]);
+  }, [createTaskMutation.isSuccess, taskUpdatedContext]);
 
   return (
     <Box

@@ -29,13 +29,13 @@ export const TaskArea: FC = (): ReactElement => {
 
   useEffect(() => {
     refetch();
-  }, [taskUpdatedContext.updated]);
+  }, [taskUpdatedContext.updated, refetch]);
 
   useEffect(() => {
     if (updateTaskMutation.isSuccess) {
       taskUpdatedContext.toggle();
     }
-  }, [updateTaskMutation.isSuccess]);
+  }, [updateTaskMutation.isSuccess, taskUpdatedContext]);
 
   function onStatusChangeHandler(
     e: React.ChangeEvent<HTMLInputElement>,
