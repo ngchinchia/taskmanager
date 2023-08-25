@@ -78,7 +78,8 @@ export const CreateTaskForm: FC = (): ReactElement => {
     return () => {
       clearTimeout(successTimeout);
     };
-  }, [createTaskMutation.isSuccess, taskUpdatedContext]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [createTaskMutation.isSuccess]);
 
   return (
     <Box

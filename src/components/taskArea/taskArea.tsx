@@ -29,13 +29,17 @@ export const TaskArea: FC = (): ReactElement => {
 
   useEffect(() => {
     refetch();
-  }, [taskUpdatedContext.updated, refetch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [taskUpdatedContext.updated]);
 
   useEffect(() => {
     if (updateTaskMutation.isSuccess) {
       taskUpdatedContext.toggle();
     }
-  }, [updateTaskMutation.isSuccess, taskUpdatedContext]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [updateTaskMutation.isSuccess]);
+
+  
 
   function onStatusChangeHandler(
     e: React.ChangeEvent<HTMLInputElement>,
